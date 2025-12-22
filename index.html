@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafoglio WebMapping - Víctor Morant & Denys Litvynov</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+            <h1 class="title">Portafolio WebMapping</h1>
+            <p class="subtitle">Víctor Morant & Denys Litvynov</p>
+        </div>
+
+        <!-- Barra de navegación superior -->
+        <nav class="navbar">
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-tab="0">Práctica 1</button>
+                <button class="tab-btn" data-tab="1">Práctica 3</button>
+                <button class="tab-btn" data-tab="2">Práctica 4</button>
+                <button class="tab-btn" data-tab="3">Práctica 5</button>
+                <button class="tab-btn" data-tab="4">Práctica 7</button>
+                <button class="tab-btn" data-tab="5">Práctica 8</button>
+                <button class="tab-btn" data-tab="6">Práctica 9</button>
+                <button class="tab-btn" data-tab="7">Práctica 10</button>
+            </div>
+        </nav>
+
+        <!-- Contenedor de pestañas -->
+        <div class="tabs-container">
+            <!-- Botón anterior -->
+            <button class="nav-button prev" id="prevBtn">❮</button>
+
+            <!-- Área de pestañas deslizables -->
+            <div class="tabs-wrapper">
+                <div class="tabs-content" id="tabsContent">
+                    <div class="tab-content">Contenido Práctica 1</div>
+                    <div class="tab-content">Contenido Práctica 3</div>
+                    <div class="tab-content">Contenido Práctica 4</div>
+                    <div class="tab-content">Contenido Práctica 5</div>
+                    <div class="tab-content">Contenido Práctica 7</div>
+                    <div class="tab-content">Contenido Práctica 8</div>
+                    <div class="tab-content">Contenido Práctica 9</div>
+                    <div class="tab-content">Contenido Práctica 10</div>
+                </div>
+            </div>
+
+            <!-- Botón siguiente -->
+            <button class="nav-button next" id="nextBtn">❯</button>
+        </div>
+    </div>
+
+    <script src="./main.js" defer></script>
+</body>
+</html>
