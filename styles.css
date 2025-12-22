@@ -168,6 +168,14 @@ body {
     border-radius: 8px;
 }
 
+.tab-image {
+    max-width: 95%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Estilos específicos para Práctica 8 */
 .pract8-content {
     display: flex !important;
