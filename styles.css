@@ -11,12 +11,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px; /* Reducido para menos espacio vacío */
 }
 
 .container {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1800px; /* Aumentado para que sea más ancho */
     background: white;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -107,9 +107,9 @@ body {
     justify-content: space-between;
     position: relative;
     flex: 1;
-    min-height: 500px;
-    gap: 20px;
-    padding: 20px;
+    min-height: 600px; /* Aumentada para más espacio */
+    gap: 10px;
+    padding: 10px; /* Reducido para menos vacío */
 }
 
 /* Botones de navegación lateral */
@@ -166,33 +166,35 @@ body {
     color: #999;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     border-radius: 8px;
+    height: 100%; /* Ocupa toda la altura */
 }
 
 .tab-image {
-    max-width: 95%;
-    max-height: 450px;
+    max-width: 100%; /* Más grande */
+    max-height: 550px; /* Aumentada */
     object-fit: contain;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-/* Estilos específicos para Práctica 3 */
+
+/* Estilos específicos para Práctica 3 (arreglado para no superponer y más grande) */
 .pract3-content {
     display: flex !important;
     align-items: stretch !important;
     justify-content: center !important;
     padding: 0 !important;
     background: white !important;
-    height: 600px; /* Aumentamos la altura para que sea más grande */
+    height: 600px; /* Más grande */
 }
 
 .pract3-container {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas lado a lado */
-    gap: 20px; /* Más espacio entre ellos */
-    padding: 20px; /* Más padding para que respiren */
-    overflow: visible; /* Evitamos que se corten o superpongan */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Más espacio */
+    padding: 20px;
+    overflow: visible; /* Evita cortes */
 }
 
 .pract3-item {
@@ -203,7 +205,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    height: 100%; /* Ocupa toda la altura */
+    height: 100%;
 }
 
 .pract3-item h3 {
@@ -219,10 +221,11 @@ body {
 .pract3-item iframe {
     flex: 1;
     width: 100%;
-    height: 100%; /* Ajusta al 100% para que sea más grande */
+    height: 100%;
     border: none;
-    min-height: 500px; /* Mínimo para evitar que sea pequeño */
+    min-height: 500px; /* Evita que sea pequeño */
 }
+
 /* Estilos específicos para Práctica 8 */
 .pract8-content {
     display: flex !important;
@@ -287,7 +290,7 @@ body {
     border-radius: 8px;
 }
 
-/* Estilos específicos para Práctica 9 */
+/* Estilos específicos para Práctica 10 */
 .pract10-content {
     display: flex !important;
     align-items: stretch !important;
@@ -302,6 +305,88 @@ body {
     height: 100%;
     border: none;
     border-radius: 8px;
+}
+
+/* Estilos específicos para Práctica 4 */
+.pract4-content {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    background: white !important;
+    height: 600px; /* Más grande */
+}
+
+.pract4-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Estilos específicos para Práctica 5 */
+.pract5-content {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    background: white !important;
+    height: 600px; /* Más grande */
+}
+
+.pract5-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Estilos específicos para Práctica 7 */
+.pract7-content {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    background: white !important;
+    height: 600px; /* Más grande */
+}
+
+.pract7-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.pract7-item {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pract7-item h3 {
+    padding: 12px 15px;
+    background: #f5f5f5;
+    color: #333;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid #667eea;
+}
+
+.pract7-item iframe,
+.pract7-item img {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Responsive */
