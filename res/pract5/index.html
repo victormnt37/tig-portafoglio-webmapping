@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de Severidad</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style> body { margin: 0; padding: 0; } #map { width: 100%; height: 100vh; } </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+
+    <script>
+        // 1. Inicializar mapa
+        var map = L.map('map').setView([39.0, -0.5], 10);
+        
+        // 2. Mapa base (Satélite)
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Esri'
+        }).addTo(map);
+
+        // 3. Cargar el archivo TIF localmente
+        fetch('./SEVERIDAD.tif')
+            .then(response => response.arrayBuffer())
+            .then(arrayBuffer => {
+                parseGeoraster(arrayBuffer).then(georaster => {
+                    var layer = new GeoRasterLayer({
+                        georaster: georaster,
+                        opacity: 0.7,
+                        resolution: 256
+                    });
+                    layer.addTo(map);
+                    map.fitBounds(layer.getBounds());
+                });
+            })
+            .catch(e => console.error("Error cargando TIF:", e));
+    </script>
+</body>
+</html>

@@ -8,6 +8,7 @@
 !_TAG_FIELD_DESCRIPTION	name	/tag name/
 !_TAG_FIELD_DESCRIPTION	pattern	/pattern/
 !_TAG_FIELD_DESCRIPTION	typeref	/Type and name of a variable or typedef/
+!_TAG_FIELD_DESCRIPTION!Python	nameref	/the original name for the tag/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_KIND_DESCRIPTION!CSS	c,class	/classes/
@@ -40,6 +41,14 @@
 !_TAG_KIND_DESCRIPTION!Markdown	s,section	/sections/
 !_TAG_KIND_DESCRIPTION!Markdown	t,subsubsection	/level 3 sections/
 !_TAG_KIND_DESCRIPTION!Markdown	u,l5subsection	/level 5 sections/
+!_TAG_KIND_DESCRIPTION!Python	I,namespace	/name referring a module defined in other file/
+!_TAG_KIND_DESCRIPTION!Python	Y,unknown	/name referring a class\/variable\/function\/module defined in other module/
+!_TAG_KIND_DESCRIPTION!Python	c,class	/classes/
+!_TAG_KIND_DESCRIPTION!Python	f,function	/functions/
+!_TAG_KIND_DESCRIPTION!Python	i,module	/modules/
+!_TAG_KIND_DESCRIPTION!Python	m,member	/class members/
+!_TAG_KIND_DESCRIPTION!Python	v,variable	/variables/
+!_TAG_KIND_DESCRIPTION!Quarto	l,chunklabel	/chunk labels/
 !_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
@@ -48,6 +57,8 @@
 !_TAG_PARSER_VERSION!HTML	0.0	/current.age/
 !_TAG_PARSER_VERSION!JavaScript	1.1	/current.age/
 !_TAG_PARSER_VERSION!Markdown	1.1	/current.age/
+!_TAG_PARSER_VERSION!Python	0.0	/current.age/
+!_TAG_PARSER_VERSION!Quarto	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
 !_TAG_PROC_CWD	/home/denys/Projects/tig-portafoglio-webmapping/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
@@ -58,6 +69,11 @@
 !_TAG_ROLE_DESCRIPTION!HTML!script	extFile	/referenced as external files/
 !_TAG_ROLE_DESCRIPTION!HTML!stylesheet	extFile	/referenced as external files/
 !_TAG_ROLE_DESCRIPTION!JavaScript!function	foreigndecl	/declared in foreign languages/
+!_TAG_ROLE_DESCRIPTION!Python!module	imported	/imported modules/
+!_TAG_ROLE_DESCRIPTION!Python!module	indirectlyImported	/module imported in alternative name/
+!_TAG_ROLE_DESCRIPTION!Python!module	namespace	/namespace from where classes\/variables\/functions are imported/
+!_TAG_ROLE_DESCRIPTION!Python!unknown	imported	/imported from the other module/
+!_TAG_ROLE_DESCRIPTION!Python!unknown	indirectlyImported	/classes\/variables\/functions\/modules imported in alternative name/
 *	styles.css	/^* {$/;"	s
 .container	styles.css	/^.container {$/;"	c
 .header	styles.css	/^.header {$/;"	c
@@ -77,13 +93,27 @@
 .pract3-item	styles.css	/^.pract3-item {$/;"	c
 .pract3-item h3	styles.css	/^.pract3-item h3 {$/;"	s
 .pract3-item iframe	styles.css	/^.pract3-item iframe {$/;"	s
+.pract4-content	styles.css	/^.pract4-content {$/;"	c
+.pract4-content iframe	styles.css	/^.pract4-content iframe {$/;"	s
+.pract5-content	styles.css	/^.pract5-content {$/;"	c
+.pract5-content iframe	styles.css	/^.pract5-content iframe {$/;"	s
+.pract5-content iframe	styles.css	/^.pract5-content iframe,$/;"	s
+.pract7-container	styles.css	/^.pract7-container {$/;"	c
+.pract7-content	styles.css	/^.pract7-content {$/;"	c
+.pract7-item	styles.css	/^.pract7-item {$/;"	c
+.pract7-item .img-container	styles.css	/^.pract7-item .img-container {$/;"	c
+.pract7-item h3	styles.css	/^.pract7-item h3 {$/;"	s
+.pract7-item iframe	styles.css	/^.pract7-item iframe {$/;"	s
+.pract7-item img	styles.css	/^.pract7-item img {$/;"	s
 .pract8-container	styles.css	/^.pract8-container {$/;"	c
 .pract8-content	styles.css	/^.pract8-content {$/;"	c
 .pract8-item	styles.css	/^.pract8-item {$/;"	c
 .pract8-item h3	styles.css	/^.pract8-item h3 {$/;"	s
 .pract8-item iframe	styles.css	/^.pract8-item iframe {$/;"	s
+.pract8-item iframe	styles.css	/^.pract8-item iframe,$/;"	s
 .pract9-content	styles.css	/^.pract9-content {$/;"	c
 .pract9-content iframe	styles.css	/^.pract9-content iframe {$/;"	s
+.pract9-content iframe	styles.css	/^.pract9-content iframe,$/;"	s
 .subtitle	styles.css	/^.subtitle {$/;"	c
 .tab-btn	styles.css	/^    .tab-btn {$/;"	c
 .tab-btn	styles.css	/^.tab-btn {$/;"	c
@@ -102,22 +132,33 @@ Contenedores	index.html	/^                                <h3>Contenedores<\/h3>
 Cómo Ejecutar en Producción (Localmente)	README.md	/^## Cómo Ejecutar en Producción (Localmente)$/;"	s	chapter:Portafolio WebMapping
 Descripción del Proyecto	README.md	/^## Descripción del Proyecto$/;"	s	chapter:Portafolio WebMapping
 Estructura del Repositorio	README.md	/^## Estructura del Repositorio$/;"	s	chapter:Portafolio WebMapping
+Gráfico de Rendimiento	index.html	/^                                <h3>Gráfico de Rendimiento<\/h3>$/;"	j
 Landsat y Sentinel Tous	res/pract10/MORANT_LITVYNOV_LANDSENTI_post.html	/^    <title>Landsat y Sentinel Tous<\/title>$/;"	j
 Linux / macOS	README.md	/^### Linux \/ macOS$/;"	S	section:Portafolio WebMapping""Cómo Ejecutar en Producción (Localmente)
 MNDWI - Morant & Litvynov	res/pract9/mndwi_Morant_Litvynov.html	/^    <title>MNDWI - Morant & Litvynov<\/title>$/;"	j
 Mapa de Precipitaciones	index.html	/^                                <h3>Mapa de Precipitaciones<\/h3>$/;"	j
+Mapa de Severidad	res/pract5/index.html	/^    <title>Mapa de Severidad<\/title>$/;"	j
 Mapa de Temperaturas	index.html	/^                                <h3>Mapa de Temperaturas<\/h3>$/;"	j
 Portafoglio WebMapping - Víctor Morant & Denys Litvynov	index.html	/^    <title>Portafoglio WebMapping - Víctor Morant & Denys Litvynov<\/title>$/;"	j
 Portafolio WebMapping	README.md	/^# Portafolio WebMapping$/;"	c
 Portafolio WebMapping	index.html	/^            <h1 class="title">Portafolio WebMapping<\/h1>$/;"	h
 Requisitos	README.md	/^## Requisitos$/;"	s	chapter:Portafolio WebMapping
+Resultados de Precisión GNSS	res/pract7/tabla_gnss.html	/^    <h3>Resultados de Precisión GNSS<\/h3>$/;"	j
+Tabla de Resultados	index.html	/^                                <h3>Tabla de Resultados<\/h3>$/;"	j
 Windows	README.md	/^### Windows$/;"	S	section:Portafolio WebMapping""Cómo Ejecutar en Producción (Localmente)
 body	styles.css	/^body {$/;"	s
+centro_lat	res/pract4/generar_pract4.py	/^centro_lat = gdf.centroid.y.mean()$/;"	v
+centro_lon	res/pract4/generar_pract4.py	/^centro_lon = gdf.centroid.x.mean()$/;"	v
 currentTab	main.js	/^let currentTab = 0;$/;"	v
+gdf	res/pract4/generar_pract4.py	/^gdf = gpd.read_file('ZONAS_VALIDAS.shp')  $/;"	v
 goToTab	main.js	/^function goToTab(index) {$/;"	f
+gpd	res/pract4/generar_pract4.py	/^import geopandas as gpd$/;"	I	nameref:module:geopandas
+m	res/pract4/generar_pract4.py	/^m = folium.Map(location=[centro_lat, centro_lon], zoom_start=7) $/;"	v
+map	res/pract5/index.html	/^    <div id="map"><\/div>$/;"	I
 map-container	res/pract10/MORANT_LITVYNOV_LANDSENTI_post.html	/^    <div id="map-container">$/;"	I
 map_32fc12ddb9035de09d9ce83b1087ccef	res/pract8/contenedores_Morant_Litvynov.html	/^            <div class="folium-map" id="map_32fc12ddb9035de09d9ce83b1087ccef" ><\/div>$/;"	I
 map_37ebc6879a3e0053157bcd9801fb8706	res/pract8/Accidentes_Madrid_Morant_Litvynov.html	/^            <div class="folium-map" id="map_37ebc6879a3e0053157bcd9801fb8706" ><\/div>$/;"	I
+map_9d3c68ecaa083f872587ebc7483197e8	res/pract4/zonas_validas.html	/^            <div class="folium-map" id="map_9d3c68ecaa083f872587ebc7483197e8" ><\/div>$/;"	I
 map_e34290dbc4f816784e69243c301b2404	res/pract9/mndwi_Morant_Litvynov.html	/^    <div id="map_e34290dbc4f816784e69243c301b2404"><\/div>$/;"	I
 map_fa53f0616eb667366152e4658e63ac05	res/pract10/MORANT_LITVYNOV_LANDSENTI_post.html	/^        <div class="folium-map" id="map_fa53f0616eb667366152e4658e63ac05"><\/div>$/;"	I
 nextBtn	index.html	/^            <button class="nav-button next" id="nextBtn">❯<\/button>$/;"	I
