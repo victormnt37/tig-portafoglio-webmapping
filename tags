@@ -97,19 +97,23 @@
 .pract4-content iframe	styles.css	/^.pract4-content iframe {$/;"	s
 .pract5-content	styles.css	/^.pract5-content {$/;"	c
 .pract5-content iframe	styles.css	/^.pract5-content iframe {$/;"	s
+.pract5-content iframe	styles.css	/^.pract5-content iframe,$/;"	s
 .pract7-container	styles.css	/^.pract7-container {$/;"	c
 .pract7-content	styles.css	/^.pract7-content {$/;"	c
 .pract7-item	styles.css	/^.pract7-item {$/;"	c
+.pract7-item .img-container	styles.css	/^.pract7-item .img-container {$/;"	c
 .pract7-item h3	styles.css	/^.pract7-item h3 {$/;"	s
-.pract7-item iframe	styles.css	/^.pract7-item iframe,$/;"	s
+.pract7-item iframe	styles.css	/^.pract7-item iframe {$/;"	s
 .pract7-item img	styles.css	/^.pract7-item img {$/;"	s
 .pract8-container	styles.css	/^.pract8-container {$/;"	c
 .pract8-content	styles.css	/^.pract8-content {$/;"	c
 .pract8-item	styles.css	/^.pract8-item {$/;"	c
 .pract8-item h3	styles.css	/^.pract8-item h3 {$/;"	s
 .pract8-item iframe	styles.css	/^.pract8-item iframe {$/;"	s
+.pract8-item iframe	styles.css	/^.pract8-item iframe,$/;"	s
 .pract9-content	styles.css	/^.pract9-content {$/;"	c
 .pract9-content iframe	styles.css	/^.pract9-content iframe {$/;"	s
+.pract9-content iframe	styles.css	/^.pract9-content iframe,$/;"	s
 .subtitle	styles.css	/^.subtitle {$/;"	c
 .tab-btn	styles.css	/^    .tab-btn {$/;"	c
 .tab-btn	styles.css	/^.tab-btn {$/;"	c
@@ -133,11 +137,13 @@ Landsat y Sentinel Tous	res/pract10/MORANT_LITVYNOV_LANDSENTI_post.html	/^    <t
 Linux / macOS	README.md	/^### Linux \/ macOS$/;"	S	section:Portafolio WebMapping""Cómo Ejecutar en Producción (Localmente)
 MNDWI - Morant & Litvynov	res/pract9/mndwi_Morant_Litvynov.html	/^    <title>MNDWI - Morant & Litvynov<\/title>$/;"	j
 Mapa de Precipitaciones	index.html	/^                                <h3>Mapa de Precipitaciones<\/h3>$/;"	j
+Mapa de Severidad	res/pract5/index.html	/^    <title>Mapa de Severidad<\/title>$/;"	j
 Mapa de Temperaturas	index.html	/^                                <h3>Mapa de Temperaturas<\/h3>$/;"	j
 Portafoglio WebMapping - Víctor Morant & Denys Litvynov	index.html	/^    <title>Portafoglio WebMapping - Víctor Morant & Denys Litvynov<\/title>$/;"	j
 Portafolio WebMapping	README.md	/^# Portafolio WebMapping$/;"	c
 Portafolio WebMapping	index.html	/^            <h1 class="title">Portafolio WebMapping<\/h1>$/;"	h
 Requisitos	README.md	/^## Requisitos$/;"	s	chapter:Portafolio WebMapping
+Resultados de Precisión GNSS	res/pract7/tabla_gnss.html	/^    <h3>Resultados de Precisión GNSS<\/h3>$/;"	j
 Tabla de Resultados	index.html	/^                                <h3>Tabla de Resultados<\/h3>$/;"	j
 Windows	README.md	/^### Windows$/;"	S	section:Portafolio WebMapping""Cómo Ejecutar en Producción (Localmente)
 body	styles.css	/^body {$/;"	s
@@ -148,10 +154,11 @@ gdf	res/pract4/generar_pract4.py	/^gdf = gpd.read_file('ZONAS_VALIDAS.shp')  $/;
 goToTab	main.js	/^function goToTab(index) {$/;"	f
 gpd	res/pract4/generar_pract4.py	/^import geopandas as gpd$/;"	I	nameref:module:geopandas
 m	res/pract4/generar_pract4.py	/^m = folium.Map(location=[centro_lat, centro_lon], zoom_start=7) $/;"	v
+map	res/pract5/index.html	/^    <div id="map"><\/div>$/;"	I
 map-container	res/pract10/MORANT_LITVYNOV_LANDSENTI_post.html	/^    <div id="map-container">$/;"	I
 map_32fc12ddb9035de09d9ce83b1087ccef	res/pract8/contenedores_Morant_Litvynov.html	/^            <div class="folium-map" id="map_32fc12ddb9035de09d9ce83b1087ccef" ><\/div>$/;"	I
 map_37ebc6879a3e0053157bcd9801fb8706	res/pract8/Accidentes_Madrid_Morant_Litvynov.html	/^            <div class="folium-map" id="map_37ebc6879a3e0053157bcd9801fb8706" ><\/div>$/;"	I
-map_51074f5f2c4b2a383c9bd1a2ef857146	res/pract4/zonas_validas.html	/^            <div class="folium-map" id="map_51074f5f2c4b2a383c9bd1a2ef857146" ><\/div>$/;"	I
+map_9d3c68ecaa083f872587ebc7483197e8	res/pract4/zonas_validas.html	/^            <div class="folium-map" id="map_9d3c68ecaa083f872587ebc7483197e8" ><\/div>$/;"	I
 map_e34290dbc4f816784e69243c301b2404	res/pract9/mndwi_Morant_Litvynov.html	/^    <div id="map_e34290dbc4f816784e69243c301b2404"><\/div>$/;"	I
 map_fa53f0616eb667366152e4658e63ac05	res/pract10/MORANT_LITVYNOV_LANDSENTI_post.html	/^        <div class="folium-map" id="map_fa53f0616eb667366152e4658e63ac05"><\/div>$/;"	I
 nextBtn	index.html	/^            <button class="nav-button next" id="nextBtn">❯<\/button>$/;"	I
