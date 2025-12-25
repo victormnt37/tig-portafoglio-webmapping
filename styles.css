@@ -33,6 +33,10 @@ body {
     align-items: stretch;
 }
 
+.pract8-item p {
+    margin: 1rem;
+}
+
 /* --- 1. RESET Y BASE --- */
 * {
     margin: 0;
