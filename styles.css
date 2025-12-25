@@ -1,3 +1,39 @@
+/* Evitar el destello inicial (FOUC) */
+body {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+/* --- Ajuste Práctica 7: Evitar recortes --- */
+.pract7-container {
+    display: grid;
+    grid-template-columns: 75% 25%; /* Tabla prioritaria */
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Forzar que los iframes de los mapas no tengan scroll propio */
+.tab-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    flex: 1;
+}
+
+/* Contenedores de las prácticas 8, 9 y 10 */
+.pract8-content, .pract9-content, .pract10-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* --- 1. RESET Y BASE --- */
 * {
     margin: 0;
     padding: 0;
@@ -5,20 +41,20 @@
 }
 
 body {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px; /* Reducido aún más para menos espacio vacío */
+    padding: 10px;
 }
 
+/* --- 2. CONTENEDORES PRINCIPALES --- */
 .container {
     width: 100%;
-    max-width: 1920px; /* Aumentado para que sea más ancho en pantallas grandes */
+    max-width: 1920px;
+    height: 95vh; /* Forzamos altura casi total de la pantalla */
     background: white;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -27,34 +63,22 @@ body {
     flex-direction: column;
 }
 
-/* Encabezado */
 .header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 20px 20px;
+    padding: 15px;
     text-align: center;
+    flex-shrink: 0;
 }
 
-.title {
-    font-size: 36px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-    letter-spacing: 0.5px;
-}
+.title { font-size: 28px; margin-bottom: 5px; }
+.subtitle { font-size: 14px; opacity: 0.9; }
 
-.subtitle {
-    font-size: 16px;
-    font-weight: 300;
-    margin: 0;
-    opacity: 0.95;
-    letter-spacing: 0.3px;
-}
-
-/* Barra de navegación superior */
+/* --- 3. NAVEGACIÓN --- */
 .navbar {
     background: #f5f5f5;
     border-bottom: 2px solid #e0e0e0;
-    padding: 0;
+    flex-shrink: 0;
 }
 
 .nav-tabs {
@@ -62,92 +86,37 @@ body {
     gap: 10px;
     padding: 10px 20px;
     overflow-x: auto;
-    scroll-behavior: smooth;
-}
-
-.nav-tabs::-webkit-scrollbar {
-    height: 6px;
-}
-
-.nav-tabs::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.nav-tabs::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 3px;
 }
 
 .tab-btn {
-    padding: 12px 20px;
+    padding: 10px 20px;
     border: none;
     background: white;
-    color: #333;
-    font-size: 14px;
-    font-weight: 500;
     cursor: pointer;
     border-radius: 6px 6px 0 0;
-    white-space: nowrap;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     border-bottom: 3px solid transparent;
-}
-
-.tab-btn:hover {
-    background: #f0f0f0;
+    font-weight: 500;
 }
 
 .tab-btn.active {
-    background: white;
     color: #667eea;
     border-bottom: 3px solid #667eea;
 }
 
-/* Contenedor principal */
+/* --- 4. ÁREA DEL CARRUSEL (ESTRUCTURA) --- */
 .tabs-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex: 1; /* Ocupa todo el espacio sobrante */
     position: relative;
-    flex: 1;
-    min-height: 800px; /* Aumentada significativamente para estirar hacia abajo y aprovechar espacio */
-    gap: 10px;
-    padding: 5px; /* Reducido para menos vacío */
+    align-items: stretch;
+    padding: 10px;
+    overflow: hidden;
 }
 
-/* Botones de navegación lateral */
-.nav-button {
-    background: #667eea;
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-}
-
-.nav-button:hover {
-    background: #764ba2;
-    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
-    transform: scale(1.05);
-}
-
-.nav-button:active {
-    transform: scale(0.95);
-}
-
-/* Área de deslizamiento */
 .tabs-wrapper {
     flex: 1;
     overflow: hidden;
-    position: relative;
-    height: 100%;
 }
 
 .tabs-content {
@@ -157,321 +126,109 @@ body {
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+/* --- 5. CONTENIDO DE LAS PESTAÑAS (COMÚN) --- */
 .tab-content {
     min-width: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 600;
-    color: #999;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    border-radius: 8px;
-    height: 100%; /* Ocupa toda la altura */
-}
-
-.tab-image {
-    max-width: 100%; /* Más grande */
-    max-height: 750px; /* Aumentada para estirar */
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.pract5-content iframe,
-.pract8-item iframe,
-.pract9-content iframe,
-.pract10-content iframe {
-    width: 100%;
-    height: 100%; /* Asegurar que ocupe toda la altura para eliminar huecos blancos */
-    border: none;
-    display: block; /* Elimina espacios en blanco extra abajo */
-}
-
-/* Estilos específicos para Práctica 3 (arreglado para no superponer y más grande) */
-.pract3-content {
-    display: flex !important;
-    align-items: stretch !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    background: white !important;
-    height: 100%; /* Estirado al 100% */
-}
-
-.pract3-container {
-    width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px; /* Más espacio */
-    padding: 20px;
-    overflow: visible; /* Evita cortes */
-}
-
-.pract3-item {
+    background: #fff;
     display: flex;
     flex-direction: column;
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    height: 100%;
-}
-
-.pract3-item h3 {
-    padding: 12px 15px;
-    background: #f5f5f5;
-    color: #333;
-    margin: 0;
-    font-size: 16px; /* Título más grande */
-    font-weight: 600;
-    border-bottom: 2px solid #667eea;
-}
-
-.pract3-item iframe {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    border: none;
-    min-height: 500px; /* Evita que sea pequeño */
-}
-
-/* --- Mejora Prácticas 8, 9 y 10: Altura Completa --- */
-.pract8-container, 
-.pract9-content, 
-.pract10-content {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Asegurar que los iframes dentro de estos contenedores se estiren */
-.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {
-    flex: 1; 
-    height: 100% !important;
-}
-
-.pract8-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    padding: 15px;
-    height: 100%; /* Importante para que no sobre blanco abajo */
-    box-sizing: border-box;
-}
-
-/* Estilos específicos para Práctica 8 */
-.pract8-content {
-    display: flex !important;
-    align-items: stretch !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    background: white !important;
-    height: 100%; /* Estirado al 100% para eliminar huecos */
-}
-
-.pract8-container {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    padding: 15px;
-    overflow: hidden;
-}
-
-.pract8-item {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.pract8-item h3 {
-    padding: 12px 15px;
-    background: #f5f5f5;
-    color: #333;
-    margin: 0;
-    font-size: 14px;
-    font-weight: 600;
-    border-bottom: 2px solid #667eea;
-}
-
-.pract8-item iframe {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Estilos específicos para Práctica 9 */
-.pract9-content {
-    display: flex !important;
-    align-items: center !important; /* Centrado verticalmente */
-    justify-content: center !important;
-    padding: 0 !important;
-    background: white !important;
-    height: 100%; /* Estirado al 100% */
-}
-
-.pract9-content iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
-}
-
-/* Estilos específicos para Práctica 10 */
-.pract10-content {
-    display: flex !important;
-    align-items: center !important; /* Centrado verticalmente */
-    justify-content: center !important;
-    padding: 0 !important;
-    background: white !important;
-    height: 100%; /* Estirado al 100% */
-}
-
-.pract10-content iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
-}
-
-/* Estilos específicos para Práctica 4 */
-.pract4-content {
-    display: flex !important;
-    align-items: stretch !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    background: white !important;
-    height: 100%; /* Estirado */
-}
-
-.pract4-content iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
-}
-
-/* Estilos específicos para Práctica 5 */
-.pract5-content {
-    display: flex !important;
-    align-items: stretch !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    background: white !important;
-    height: 100%; /* Estirado */
-}
-
-/* --- Estilos Práctica 5 --- */
-.pract5-content iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* --- Estilos Práctica 7 (Dos columnas) --- */
-.pract7-content {
-    background: #f4f4f4 !important; /* Fondo gris claro */
-    padding: 0 !important;
-}
-
-.pract7-container {
-    display: grid;
-    /* La tabla (2fr) ocupará el doble que la imagen (1fr) */
-    grid-template-columns: 2fr 1fr; 
-    gap: 20px;
-    padding: 20px;
-    height: 100%;
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    box-sizing: border-box;
-}
-
-.pract7-item {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.pract7-item h3 {
-    background: #333;
-    color: white;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.pract7-item iframe {
-    flex: 1; /* Ocupa el resto del espacio */
-    width: 100%;
-    border: none;
-}
-
-.pract7-item .img-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background: white;
-}
-
-.pract7-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Ajusta la imagen sin deformarla */
-}
-
-/* Mejoras adicionales para profesionalismo */
-body {
-    transition: background 0.3s ease; /* Suavizar cambios de fondo */
-}
-
-.tab-content {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para tabs */
+    align-items: stretch; /* Estira el contenido por defecto */
 }
 
 iframe {
-    transition: opacity 0.3s ease; /* Suavizar carga de iframes */
-    opacity: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    flex: 1;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .tabs-container {
-        min-height: 500px; /* Ajuste para móviles */
-        gap: 5px;
-    }
+/* --- 6. EXCEPCIONES Y GRIDS ESPECÍFICOS --- */
 
-    .nav-button {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
+/* Práctica 1: Única que va centrada para la imagen */
+.tab-content:first-child {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
 
-    .tab-btn {
-        padding: 10px 16px;
-        font-size: 13px;
-    }
+.tab-image {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 
-    .tab-content {
-        font-size: 18px;
-    }
+/* Grids de 2 columnas (Prácticas 3 y 8) */
+.pract3-container, .pract8-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    height: 100%;
+    padding: 10px;
+}
 
+/* Práctica 7: Tabla ancha (70%) e Imagen estrecha (30%) */
+.pract7-container {
+    display: grid;
+    grid-template-columns: 7fr 3fr; /* La tabla tiene prioridad */
+    gap: 15px;
+    height: 100%;
+    padding: 10px;
+}
+
+/* Estilo para los items dentro de grids */
+.pract3-item, .pract8-item, .pract7-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pract3-item h3, .pract8-item h3, .pract7-item h3 {
+    background: #f8f9fa;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 2px solid #667eea;
+    text-align: center;
+}
+
+.img-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Botones laterales */
+.nav-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    align-self: center;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
     .pract3-container, .pract8-container, .pract7-container {
-        grid-template-columns: 1fr; /* Una columna en móviles para mejor visibilidad */
+        grid-template-columns: 1fr;
     }
 }
 

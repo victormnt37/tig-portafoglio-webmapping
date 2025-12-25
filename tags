@@ -77,65 +77,37 @@
 *	styles.css	/^* {$/;"	s
 .container	styles.css	/^.container {$/;"	c
 .header	styles.css	/^.header {$/;"	c
-.nav-button	styles.css	/^    .nav-button {$/;"	c
+.img-container	styles.css	/^.img-container {$/;"	c
+.img-container img	styles.css	/^.img-container img {$/;"	s
 .nav-button	styles.css	/^.nav-button {$/;"	c
-.nav-button:active	styles.css	/^.nav-button:active {$/;"	c
-.nav-button:hover	styles.css	/^.nav-button:hover {$/;"	c
 .nav-tabs	styles.css	/^.nav-tabs {$/;"	c
-.nav-tabs::-webkit-scrollbar	styles.css	/^.nav-tabs::-webkit-scrollbar {$/;"	c
-.nav-tabs::-webkit-scrollbar-thumb	styles.css	/^.nav-tabs::-webkit-scrollbar-thumb {$/;"	c
-.nav-tabs::-webkit-scrollbar-track	styles.css	/^.nav-tabs::-webkit-scrollbar-track {$/;"	c
 .navbar	styles.css	/^.navbar {$/;"	c
-.pract10-content	styles.css	/^.pract10-content {$/;"	c
-.pract10-content iframe	styles.css	/^.pract10-content iframe {$/;"	s
-.pract10-content iframe	styles.css	/^.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {$/;"	s
+.pract10-content	styles.css	/^.pract8-content, .pract9-content, .pract10-content {$/;"	c
 .pract3-container	styles.css	/^    .pract3-container, .pract8-container, .pract7-container {$/;"	c
-.pract3-container	styles.css	/^.pract3-container {$/;"	c
-.pract3-content	styles.css	/^.pract3-content {$/;"	c
-.pract3-item	styles.css	/^.pract3-item {$/;"	c
-.pract3-item h3	styles.css	/^.pract3-item h3 {$/;"	s
-.pract3-item iframe	styles.css	/^.pract3-item iframe {$/;"	s
-.pract4-content	styles.css	/^.pract4-content {$/;"	c
-.pract4-content iframe	styles.css	/^.pract4-content iframe {$/;"	s
-.pract5-content	styles.css	/^.pract5-content {$/;"	c
-.pract5-content iframe	styles.css	/^.pract5-content iframe {$/;"	s
-.pract5-content iframe	styles.css	/^.pract5-content iframe,$/;"	s
+.pract3-container	styles.css	/^.pract3-container, .pract8-container {$/;"	c
+.pract3-item	styles.css	/^.pract3-item, .pract8-item, .pract7-item {$/;"	c
+.pract3-item h3	styles.css	/^.pract3-item h3, .pract8-item h3, .pract7-item h3 {$/;"	s
 .pract7-container	styles.css	/^    .pract3-container, .pract8-container, .pract7-container {$/;"	c
 .pract7-container	styles.css	/^.pract7-container {$/;"	c
-.pract7-content	styles.css	/^.pract7-content {$/;"	c
-.pract7-item	styles.css	/^.pract7-item {$/;"	c
-.pract7-item .img-container	styles.css	/^.pract7-item .img-container {$/;"	c
-.pract7-item h3	styles.css	/^.pract7-item h3 {$/;"	s
-.pract7-item iframe	styles.css	/^.pract7-item iframe {$/;"	s
-.pract7-item img	styles.css	/^.pract7-item img {$/;"	s
+.pract7-item	styles.css	/^.pract3-item, .pract8-item, .pract7-item {$/;"	c
+.pract7-item h3	styles.css	/^.pract3-item h3, .pract8-item h3, .pract7-item h3 {$/;"	s
 .pract8-container	styles.css	/^    .pract3-container, .pract8-container, .pract7-container {$/;"	c
-.pract8-container	styles.css	/^.pract8-container {$/;"	c
-.pract8-container	styles.css	/^.pract8-container, $/;"	c
-.pract8-content	styles.css	/^.pract8-content {$/;"	c
-.pract8-content	styles.css	/^.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {$/;"	c
-.pract8-item	styles.css	/^.pract8-item {$/;"	c
-.pract8-item	styles.css	/^.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {$/;"	c
-.pract8-item h3	styles.css	/^.pract8-item h3 {$/;"	s
-.pract8-item iframe	styles.css	/^.pract8-item iframe {$/;"	s
-.pract8-item iframe	styles.css	/^.pract8-item iframe,$/;"	s
-.pract9-content	styles.css	/^.pract9-content {$/;"	c
-.pract9-content	styles.css	/^.pract9-content, $/;"	c
-.pract9-content iframe	styles.css	/^.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {$/;"	s
-.pract9-content iframe	styles.css	/^.pract9-content iframe {$/;"	s
-.pract9-content iframe	styles.css	/^.pract9-content iframe,$/;"	s
-.subtitle	styles.css	/^.subtitle {$/;"	c
-.tab-btn	styles.css	/^    .tab-btn {$/;"	c
+.pract8-container	styles.css	/^.pract3-container, .pract8-container {$/;"	c
+.pract8-content	styles.css	/^.pract8-content, .pract9-content, .pract10-content {$/;"	c
+.pract8-item	styles.css	/^.pract3-item, .pract8-item, .pract7-item {$/;"	c
+.pract8-item h3	styles.css	/^.pract3-item h3, .pract8-item h3, .pract7-item h3 {$/;"	s
+.pract9-content	styles.css	/^.pract8-content, .pract9-content, .pract10-content {$/;"	c
+.subtitle	styles.css	/^.subtitle { font-size: 14px; opacity: 0.9; }$/;"	c
 .tab-btn	styles.css	/^.tab-btn {$/;"	c
 .tab-btn.active	styles.css	/^.tab-btn.active {$/;"	c
-.tab-btn:hover	styles.css	/^.tab-btn:hover {$/;"	c
-.tab-content	styles.css	/^    .tab-content {$/;"	c
 .tab-content	styles.css	/^.tab-content {$/;"	c
+.tab-content iframe	styles.css	/^.tab-content iframe {$/;"	s
+.tab-content:first-child	styles.css	/^.tab-content:first-child {$/;"	c
 .tab-image	styles.css	/^.tab-image {$/;"	c
-.tabs-container	styles.css	/^    .tabs-container {$/;"	c
 .tabs-container	styles.css	/^.tabs-container {$/;"	c
 .tabs-content	styles.css	/^.tabs-content {$/;"	c
 .tabs-wrapper	styles.css	/^.tabs-wrapper {$/;"	c
-.title	styles.css	/^.title {$/;"	c
+.title	styles.css	/^.title { font-size: 28px; margin-bottom: 5px; }$/;"	c
 Accidentes Madrid	index.html	/^                                <h3>Accidentes Madrid<\/h3>$/;"	j
 Contenedores	index.html	/^                                <h3>Contenedores<\/h3>$/;"	j
 Cómo Ejecutar en Producción (Localmente)	README.md	/^## Cómo Ejecutar en Producción (Localmente)$/;"	s	chapter:Portafolio WebMapping
@@ -159,11 +131,13 @@ Windows	README.md	/^### Windows$/;"	S	section:Portafolio WebMapping""Cómo Ejecu
 body	styles.css	/^body {$/;"	s
 centro_lat	res/pract4/generar_pract4.py	/^centro_lat = gdf.centroid.y.mean()$/;"	v
 centro_lon	res/pract4/generar_pract4.py	/^centro_lon = gdf.centroid.x.mean()$/;"	v
-currentTab	main.js	/^let currentTab = 0;$/;"	v
+currentTab	main.js	/^        let currentTab = 0;$/;"	v
 gdf	res/pract4/generar_pract4.py	/^gdf = gpd.read_file('ZONAS_VALIDAS.shp')  $/;"	v
-goToTab	main.js	/^function goToTab(index) {$/;"	f
+goToTab	main.js	/^        const goToTab = (index) => {$/;"	f
 gpd	res/pract4/generar_pract4.py	/^import geopandas as gpd$/;"	I	nameref:module:geopandas
 iframe	styles.css	/^iframe {$/;"	s
+index	main.js	/^                const index = parseInt(e.target.dataset.tab);$/;"	C
+init	main.js	/^    const init = () => {$/;"	f
 m	res/pract4/generar_pract4.py	/^m = folium.Map(location=[centro_lat, centro_lon], zoom_start=7) $/;"	v
 map	res/pract5/index.html	/^    <div id="map"><\/div>$/;"	I
 map-container	res/pract10/MORANT_LITVYNOV_LANDSENTI_post.html	/^    <div id="map-container">$/;"	I
@@ -173,14 +147,12 @@ map_9d3c68ecaa083f872587ebc7483197e8	res/pract4/zonas_validas.html	/^           
 map_e34290dbc4f816784e69243c301b2404	res/pract9/mndwi_Morant_Litvynov.html	/^    <div id="map_e34290dbc4f816784e69243c301b2404"><\/div>$/;"	I
 map_fa53f0616eb667366152e4658e63ac05	res/pract10/MORANT_LITVYNOV_LANDSENTI_post.html	/^        <div class="folium-map" id="map_fa53f0616eb667366152e4658e63ac05"><\/div>$/;"	I
 nextBtn	index.html	/^            <button class="nav-button next" id="nextBtn">❯<\/button>$/;"	I
-nextBtn	main.js	/^const nextBtn = document.getElementById('nextBtn');$/;"	C
-nextTab	main.js	/^function nextTab() {$/;"	f
+nextBtn	main.js	/^        const nextBtn = document.getElementById('nextBtn');$/;"	C
+offset	main.js	/^                const offset = -currentTab * 100;$/;"	C
 prevBtn	index.html	/^            <button class="nav-button prev" id="prevBtn">❮<\/button>$/;"	I
-prevBtn	main.js	/^const prevBtn = document.getElementById('prevBtn');$/;"	C
-prevTab	main.js	/^function prevTab() {$/;"	f
-tabButtons	main.js	/^const tabButtons = document.querySelectorAll('.tab-btn');$/;"	C
-tabIndex	main.js	/^        const tabIndex = parseInt(e.target.dataset.tab);$/;"	C
+prevBtn	main.js	/^        const prevBtn = document.getElementById('prevBtn');$/;"	C
+tabButtons	main.js	/^        const tabButtons = document.querySelectorAll('.tab-btn');$/;"	C
 tabsContent	index.html	/^                <div class="tabs-content" id="tabsContent">$/;"	I
-tabsContent	main.js	/^const tabsContent = document.getElementById('tabsContent');$/;"	C
-totalTabs	main.js	/^const totalTabs = 8;$/;"	C
-updateActiveButton	main.js	/^function updateActiveButton() {$/;"	f
+tabsContent	main.js	/^        const tabsContent = document.getElementById('tabsContent');$/;"	C
+totalTabs	main.js	/^        const totalTabs = tabButtons.length;$/;"	C
+updateUI	main.js	/^        const updateUI = () => {$/;"	f
