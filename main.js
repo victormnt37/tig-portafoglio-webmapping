@@ -69,5 +69,15 @@ tabButtons.forEach((btn) => {
     });
 });
 
-// Inicializar (primera pestaña activa)
-updateActiveButton();
+// Inicializar (primera pestaña activa) después de que la página cargue completamente para evitar bugs de clic inicial
+window.addEventListener('load', () => {
+    updateActiveButton();
+    // Forzar un pequeño retraso para asegurar que todos los elementos estén listos
+    setTimeout(() => {
+        document.body.style.pointerEvents = 'auto'; // Habilitar interacciones
+    }, 500);
+});
+
+// Deshabilitar clics temporalmente al inicio para evitar bugs de carga
+document.body.style.pointerEvents = 'none';
+

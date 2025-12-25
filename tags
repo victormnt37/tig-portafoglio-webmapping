@@ -88,6 +88,8 @@
 .navbar	styles.css	/^.navbar {$/;"	c
 .pract10-content	styles.css	/^.pract10-content {$/;"	c
 .pract10-content iframe	styles.css	/^.pract10-content iframe {$/;"	s
+.pract10-content iframe	styles.css	/^.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {$/;"	s
+.pract3-container	styles.css	/^    .pract3-container, .pract8-container, .pract7-container {$/;"	c
 .pract3-container	styles.css	/^.pract3-container {$/;"	c
 .pract3-content	styles.css	/^.pract3-content {$/;"	c
 .pract3-item	styles.css	/^.pract3-item {$/;"	c
@@ -98,6 +100,7 @@
 .pract5-content	styles.css	/^.pract5-content {$/;"	c
 .pract5-content iframe	styles.css	/^.pract5-content iframe {$/;"	s
 .pract5-content iframe	styles.css	/^.pract5-content iframe,$/;"	s
+.pract7-container	styles.css	/^    .pract3-container, .pract8-container, .pract7-container {$/;"	c
 .pract7-container	styles.css	/^.pract7-container {$/;"	c
 .pract7-content	styles.css	/^.pract7-content {$/;"	c
 .pract7-item	styles.css	/^.pract7-item {$/;"	c
@@ -105,13 +108,19 @@
 .pract7-item h3	styles.css	/^.pract7-item h3 {$/;"	s
 .pract7-item iframe	styles.css	/^.pract7-item iframe {$/;"	s
 .pract7-item img	styles.css	/^.pract7-item img {$/;"	s
+.pract8-container	styles.css	/^    .pract3-container, .pract8-container, .pract7-container {$/;"	c
 .pract8-container	styles.css	/^.pract8-container {$/;"	c
+.pract8-container	styles.css	/^.pract8-container, $/;"	c
 .pract8-content	styles.css	/^.pract8-content {$/;"	c
+.pract8-content	styles.css	/^.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {$/;"	c
 .pract8-item	styles.css	/^.pract8-item {$/;"	c
+.pract8-item	styles.css	/^.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {$/;"	c
 .pract8-item h3	styles.css	/^.pract8-item h3 {$/;"	s
 .pract8-item iframe	styles.css	/^.pract8-item iframe {$/;"	s
 .pract8-item iframe	styles.css	/^.pract8-item iframe,$/;"	s
 .pract9-content	styles.css	/^.pract9-content {$/;"	c
+.pract9-content	styles.css	/^.pract9-content, $/;"	c
+.pract9-content iframe	styles.css	/^.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {$/;"	s
 .pract9-content iframe	styles.css	/^.pract9-content iframe {$/;"	s
 .pract9-content iframe	styles.css	/^.pract9-content iframe,$/;"	s
 .subtitle	styles.css	/^.subtitle {$/;"	c
@@ -145,6 +154,7 @@ Portafolio WebMapping	index.html	/^            <h1 class="title">Portafolio WebM
 Requisitos	README.md	/^## Requisitos$/;"	s	chapter:Portafolio WebMapping
 Resultados de Precisión GNSS	res/pract7/tabla_gnss.html	/^    <h3>Resultados de Precisión GNSS<\/h3>$/;"	j
 Tabla de Resultados	index.html	/^                                <h3>Tabla de Resultados<\/h3>$/;"	j
+Waypints | Prácticas TIG	res/pract7/WAYPOINTS.html	/^    <title>Waypints | Prácticas TIG<\/title>$/;"	j
 Windows	README.md	/^### Windows$/;"	S	section:Portafolio WebMapping""Cómo Ejecutar en Producción (Localmente)
 body	styles.css	/^body {$/;"	s
 centro_lat	res/pract4/generar_pract4.py	/^centro_lat = gdf.centroid.y.mean()$/;"	v
@@ -153,6 +163,7 @@ currentTab	main.js	/^let currentTab = 0;$/;"	v
 gdf	res/pract4/generar_pract4.py	/^gdf = gpd.read_file('ZONAS_VALIDAS.shp')  $/;"	v
 goToTab	main.js	/^function goToTab(index) {$/;"	f
 gpd	res/pract4/generar_pract4.py	/^import geopandas as gpd$/;"	I	nameref:module:geopandas
+iframe	styles.css	/^iframe {$/;"	s
 m	res/pract4/generar_pract4.py	/^m = folium.Map(location=[centro_lat, centro_lon], zoom_start=7) $/;"	v
 map	res/pract5/index.html	/^    <div id="map"><\/div>$/;"	I
 map-container	res/pract10/MORANT_LITVYNOV_LANDSENTI_post.html	/^    <div id="map-container">$/;"	I

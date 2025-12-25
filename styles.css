@@ -5,18 +5,20 @@
 }
 
 body {
+    opacity: 0;
+    transition: opacity 0.5s ease;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px; /* Reducido para menos espacio vacío */
+    padding: 5px; /* Reducido aún más para menos espacio vacío */
 }
 
 .container {
     width: 100%;
-    max-width: 1800px; /* Aumentado para que sea más ancho */
+    max-width: 1920px; /* Aumentado para que sea más ancho en pantallas grandes */
     background: white;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -107,9 +109,9 @@ body {
     justify-content: space-between;
     position: relative;
     flex: 1;
-    min-height: 600px; /* Aumentada para más espacio */
+    min-height: 800px; /* Aumentada significativamente para estirar hacia abajo y aprovechar espacio */
     gap: 10px;
-    padding: 10px; /* Reducido para menos vacío */
+    padding: 5px; /* Reducido para menos vacío */
 }
 
 /* Botones de navegación lateral */
@@ -171,7 +173,7 @@ body {
 
 .tab-image {
     max-width: 100%; /* Más grande */
-    max-height: 550px; /* Aumentada */
+    max-height: 750px; /* Aumentada para estirar */
     object-fit: contain;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -182,7 +184,7 @@ body {
 .pract9-content iframe,
 .pract10-content iframe {
     width: 100%;
-    height: 100%;
+    height: 100%; /* Asegurar que ocupe toda la altura para eliminar huecos blancos */
     border: none;
     display: block; /* Elimina espacios en blanco extra abajo */
 }
@@ -194,7 +196,7 @@ body {
     justify-content: center !important;
     padding: 0 !important;
     background: white !important;
-    height: 600px; /* Más grande */
+    height: 100%; /* Estirado al 100% */
 }
 
 .pract3-container {
@@ -236,6 +238,31 @@ body {
     min-height: 500px; /* Evita que sea pequeño */
 }
 
+/* --- Mejora Prácticas 8, 9 y 10: Altura Completa --- */
+.pract8-container, 
+.pract9-content, 
+.pract10-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Asegurar que los iframes dentro de estos contenedores se estiren */
+.pract8-item, .pract8-content, .pract9-content iframe, .pract10-content iframe {
+    flex: 1; 
+    height: 100% !important;
+}
+
+.pract8-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    height: 100%; /* Importante para que no sobre blanco abajo */
+    box-sizing: border-box;
+}
+
 /* Estilos específicos para Práctica 8 */
 .pract8-content {
     display: flex !important;
@@ -243,7 +270,7 @@ body {
     justify-content: center !important;
     padding: 0 !important;
     background: white !important;
-    height: 450px;
+    height: 100%; /* Estirado al 100% para eliminar huecos */
 }
 
 .pract8-container {
@@ -286,11 +313,11 @@ body {
 /* Estilos específicos para Práctica 9 */
 .pract9-content {
     display: flex !important;
-    align-items: stretch !important;
+    align-items: center !important; /* Centrado verticalmente */
     justify-content: center !important;
     padding: 0 !important;
     background: white !important;
-    height: 450px;
+    height: 100%; /* Estirado al 100% */
 }
 
 .pract9-content iframe {
@@ -303,11 +330,11 @@ body {
 /* Estilos específicos para Práctica 10 */
 .pract10-content {
     display: flex !important;
-    align-items: stretch !important;
+    align-items: center !important; /* Centrado verticalmente */
     justify-content: center !important;
     padding: 0 !important;
     background: white !important;
-    height: 450px;
+    height: 100%; /* Estirado al 100% */
 }
 
 .pract10-content iframe {
@@ -324,7 +351,7 @@ body {
     justify-content: center !important;
     padding: 0 !important;
     background: white !important;
-    height: 600px; /* Más grande */
+    height: 100%; /* Estirado */
 }
 
 .pract4-content iframe {
@@ -341,7 +368,7 @@ body {
     justify-content: center !important;
     padding: 0 !important;
     background: white !important;
-    height: 600px; /* Más grande */
+    height: 100%; /* Estirado */
 }
 
 /* --- Estilos Práctica 5 --- */
@@ -359,10 +386,12 @@ body {
 
 .pract7-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 50% para cada uno */
+    /* La tabla (2fr) ocupará el doble que la imagen (1fr) */
+    grid-template-columns: 2fr 1fr; 
     gap: 20px;
     padding: 20px;
     height: 100%;
+    width: 100%; /* Asegura que ocupe todo el ancho */
     box-sizing: border-box;
 }
 
@@ -405,11 +434,25 @@ body {
     object-fit: contain; /* Ajusta la imagen sin deformarla */
 }
 
+/* Mejoras adicionales para profesionalismo */
+body {
+    transition: background 0.3s ease; /* Suavizar cambios de fondo */
+}
+
+.tab-content {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para tabs */
+}
+
+iframe {
+    transition: opacity 0.3s ease; /* Suavizar carga de iframes */
+    opacity: 1;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .tabs-container {
-        min-height: 400px;
-        gap: 10px;
+        min-height: 500px; /* Ajuste para móviles */
+        gap: 5px;
     }
 
     .nav-button {
@@ -426,4 +469,9 @@ body {
     .tab-content {
         font-size: 18px;
     }
+
+    .pract3-container, .pract8-container, .pract7-container {
+        grid-template-columns: 1fr; /* Una columna en móviles para mejor visibilidad */
+    }
 }
+
